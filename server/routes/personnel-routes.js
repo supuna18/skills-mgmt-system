@@ -1,5 +1,5 @@
-const express = require('express');
-const router = express.Router();
+const express = require('express');                 //import the express  
+const router = express.Router();                    //part of map
 const personnelController = require('../controllers/personnelController');
 
 router.post('/', personnelController.createPersonnel);      // Create
