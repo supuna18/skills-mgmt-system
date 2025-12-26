@@ -20,7 +20,7 @@ exports.createPersonnel = (req, res) => {
     });
 };
 
-// 2. සියලුම සේවකයින්ගේ ලැයිස්තුව ලබා ගැනීම (Read)
+// 2. Read employee details
 exports.getAllPersonnel = (req, res) => {
     const sql = "SELECT * FROM personnel";
     db.query(sql, (err, results) => {
@@ -29,7 +29,7 @@ exports.getAllPersonnel = (req, res) => {
     });
 };
 
-// 3. සේවකයෙකුගේ විස්තර වෙනස් කිරීම (Update)
+// 3. Update employee details
 exports.updatePersonnel = (req, res) => {
     const { id } = req.params;
     const { name, email, role, experience_level } = req.body;
@@ -41,7 +41,7 @@ exports.updatePersonnel = (req, res) => {
     });
 };
 
-// 4. සේවකයෙක් ඉවත් කිරීම (Delete)
+// 4. Remove employee
 exports.deletePersonnel = (req, res) => {
     const { id } = req.params;
     const sql = "DELETE FROM personnel WHERE id = ?";
