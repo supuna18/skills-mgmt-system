@@ -6,7 +6,7 @@ require('dotenv').config();
 const app = express();
 app.use(cors());
 app.use(express.json()); // Read the JASON Data
-app.use('/api/personnel', require('./routes/personnelRoutes'));
+app.use('/api/personnel', require('./routes/personnel-routes'));
 
 // 1. Connect to the database
 const db = mysql.createConnection({
