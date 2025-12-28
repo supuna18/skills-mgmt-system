@@ -8,7 +8,7 @@ const db = mysql.createPool({
     database: process.env.DB_NAME
 });
 
-// 1. Create New project    
+// 1. Create New project   
 exports.createProject = (req, res) => {
     const { project_name, description, start_date, end_date, status } = req.body;
     const sql = "INSERT INTO projects (project_name, description, start_date, end_date, status) VALUES (?, ?, ?, ?, ?)";
@@ -17,7 +17,7 @@ exports.createProject = (req, res) => {
         if (err) return res.status(500).json({ error: err.message });
         res.status(201).json({ message: 'Project created successfully', projectId: result.insertId });
     });
-};
+};        
 
 // 2. Add project skills (Requirements)
 exports.addProjectRequirement = (req, res) => {
