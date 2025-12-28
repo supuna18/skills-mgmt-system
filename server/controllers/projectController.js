@@ -41,12 +41,3 @@ exports.getAllProjects = (req, res) => {
 
 
 
-const express = require('express');
-const router = express.Router();
-const projectController = require('../controllers/projectController');
-
-router.post('/', projectController.createProject); // Project එක හදන්න
-router.get('/', projectController.getAllProjects); // ලැයිස්තුව බලන්න
-router.post('/requirements', projectController.addProjectRequirement); // Skills අවශ්‍යතා දාන්න
-
-module.exports = router;
