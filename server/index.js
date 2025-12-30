@@ -8,7 +8,7 @@ app.use(cors());
 app.use(express.json()); // Read the JASON Data
 app.use('/api/personnel', require('./routes/personnel-routes'));
 app.use('/api/skills', require('./routes/skill-routes'));
-app.use('/api/projects', require('./routes/project-routes'));  //Matching projects
+app.use('/api/projects', require('./routes/project-routes'));  // add Matching projects
 
 // 1. Connect to the database part
 const db = mysql.createConnection({
