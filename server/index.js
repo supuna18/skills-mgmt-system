@@ -10,7 +10,7 @@ app.use('/api/personnel', require('./routes/personnel-routes'));
 app.use('/api/skills', require('./routes/skill-routes'));
 app.use('/api/projects', require('./routes/project-routes'));  //Matching projects
 
-// 1. Connect to the database
+// 1. Connect to the database part
 const db = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
